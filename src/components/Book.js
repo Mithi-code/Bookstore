@@ -22,7 +22,7 @@ function Book({
   );
 }
 Book.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   categories: PropTypes.string.isRequired,

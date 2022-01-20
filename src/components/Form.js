@@ -7,7 +7,6 @@ function Form() {
   const [author, setAuthor] = useState('');
   const [title, setTitle] = useState('');
   const [categories, setCategories] = useState('');
-  // const categories = [Horror, Biopic, Documentry, Adventure];
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addBook({
