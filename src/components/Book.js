@@ -4,18 +4,22 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/book';
 
 function Book({
-  id, author, title, categories,
+  id, title, category,
 }) {
   const dispatch = useDispatch();
   const remove = () => {
+    fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/vEVmNmUyYbg9MeBKBQDH/books/${id}`, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ item_id: `${id}` }),
+    });
     dispatch(removeBook(id));
   };
   return (
     <>
       <li className="book-list">
-        <p>{author}</p>
         <p>{title}</p>
-        <p>{categories}</p>
+        <p>{category}</p>
         <button type="button" onClick={remove}>Remove</button>
       </li>
     </>
@@ -23,9 +27,8 @@ function Book({
 }
 Book.propTypes = {
   id: PropTypes.number.isRequired,
-  author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  categories: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
