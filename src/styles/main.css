@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  padding: 15px;
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  margin-top: 120px;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  border-radius: 5px;
+  height: 30px;
+  margin: 10px;
+}
+
+button {
+  margin: 10px;
+}

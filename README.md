@@ -41,11 +41,11 @@ To get a local copy up and running follow these simple example steps.
 
 Clone project, run in your terminal:
 
-```$ git clone https://github.com/Mithi-code/Math-Magicians.git ```
+```$ git clone git@github.com:Mithi-code/Bookstore.git ```
 
 Open the cloned project in your code editor and run:
 
-``` $ cd Math-magicians ```
+``` $ cd Bookstore ```
 
  Install npm packages, run:
 
@@ -67,7 +67,7 @@ Then run the server:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Mithi-code/Math-Magicians/issues).
+Feel free to check the [issues page](https://github.com/Mithi-code/Bookstore/issues).
 
 ## Show your support
 
