@@ -20,10 +20,8 @@ function books() {
     getBooks();
   }, []);
   return (
-    <div>
-      <h2>Book List</h2>
-      <Form />
-      <ul>
+    <>
+      <div className="cards">
         {books && books.map((book) => (
           <Book
             key={book.id}
@@ -32,8 +30,9 @@ function books() {
             category={book.category}
           />
         ))}
-      </ul>
-    </div>
+      </div>
+      <Form />
+    </>
   );
 }
 
