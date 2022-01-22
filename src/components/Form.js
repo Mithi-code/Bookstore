@@ -22,12 +22,11 @@ function Form() {
 
   return (
     <>
+      <h2 className="form-title">Add New Books</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Please enter title" value={title} onChange={(e) => setTitle(e.target.value)} required />
-        <br />
-        <input type="text" placeholder="Please select categories" value={category} onChange={(e) => setCategory(e.target.value)} required />
-        <br />
-        <button type="submit">Submit</button>
+        <input className="title" type="text" placeholder="Please enter title" value={title} onChange={(e) => setTitle(e.target.value)} required />
+        <input className="category" type="text" placeholder="Please select categories" value={category} onChange={(e) => setCategory(e.target.value)} required />
+        <button type="submit" className="btn-submit">ADD BOOK</button>
       </form>
     </>
   );

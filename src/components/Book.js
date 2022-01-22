@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { removeBook } from '../redux/books/book';
 
 function Book({
@@ -15,14 +16,43 @@ function Book({
     });
     dispatch(removeBook(id));
   };
+  const percentage = 67;
+
   return (
-    <>
-      <li className="book-list">
-        <p>{title}</p>
-        <p>{category}</p>
-        <button type="button" onClick={remove}>Remove</button>
-      </li>
-    </>
+    <div className="book-cards">
+      <div className="book-list">
+        <p className="book-category">{category}</p>
+        <p className="book-title">{title}</p>
+        <button type="button" className="btn-modify">Comment</button>
+        <button type="button" onClick={remove} className="btn-modify">Remove</button>
+        <button type="button" className="btn-modify">Edit</button>
+      </div>
+      <div className="loading">
+        <div className="progress-bar-c">
+          <CircularProgressbar
+            value={percentage}
+            styles={buildStyles({ pathColor: '#0EA5E9', marginRight: '10px' })}
+            className="progress-bar"
+          />
+          <div className="progress-value-c">
+            <p className="progress-percentage">
+              {percentage}
+              %
+            </p>
+            <p className="progress-completed">Completed</p>
+          </div>
+        </div>
+        <div className="update-progg-c">
+          <h2 className="chapter-h2">CURRENT CHAPTER</h2>
+          <h3 className="chapter-h3">
+            Chapter
+            {' '}
+            { `${Math.floor(Math.random() * 50)}`}
+          </h3>
+          <button type="button" className="update-progg-btn">Update Progress</button>
+        </div>
+      </div>
+    </div>
   );
 }
 Book.propTypes = {
