@@ -24,7 +24,7 @@ function Book({
         <p className="book-category">{category}</p>
         <p className="book-title">{title}</p>
         <button type="button" className="btn-modify">Comment</button>
-        <button type="button" onClick={remove} className="btn-modify">Remove</button>
+        <button type="button" onClick={remove} className="btn-modify btn-rmv">Remove</button>
         <button type="button" className="btn-modify">Edit</button>
       </div>
       <div className="loading">
